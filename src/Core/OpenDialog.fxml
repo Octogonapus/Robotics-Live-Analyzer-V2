@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Core.OpenDialogController">
+  <children>
+    <VBox id="VBox" alignment="CENTER" spacing="11.0" AnchorPane.bottomAnchor="176.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="176.0">
+      <children>
+        <Text fx:id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Save Current File and Load New File In Same Window or Create New Window?" />
+        <HBox id="HBox" alignment="CENTER" spacing="11.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#sameWindowButtonPressed" text="Same Window" />
+            <Button mnemonicParsing="false" onAction="#newWindowButtonPressed" text="New Window" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

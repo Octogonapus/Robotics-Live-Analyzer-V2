@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane id="borderPan" fx:id="borderPane" prefHeight="796.0" prefWidth="1672.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Core.Controller">
+  <center>
+    <AnchorPane prefHeight="772.0" prefWidth="825.0">
+      <children>
+        <TableView fx:id="matchTableView" prefHeight="744.0" prefWidth="961.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" resizable="true" text="Match Name" fx:id="matchNameTableColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Red Team 1" fx:id="redOneTableColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Red Team 2" fx:id="redTwoTableColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Blue Team 1" fx:id="blueOneTableColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Blue Team 2" fx:id="blueTwoTableColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Red Score" fx:id="redScoreTableColumn" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="206.0" text="Blue Score" fx:id="blueScoreTableColumn" />
+          </columns>
+        </TableView>
+      </children>
+    </AnchorPane>
+  </center>
+  <left>
+    <AnchorPane prefHeight="654.0" prefWidth="200.0">
+      <children>
+        <VBox id="VBox" alignment="CENTER" fillWidth="true" layoutX="14.0" spacing="11.0" AnchorPane.bottomAnchor="14.0" AnchorPane.topAnchor="14.0">
+          <children>
+            <VBox id="VBox" alignment="CENTER" spacing="11.0">
+              <children>
+                <VBox id="VBox" alignment="CENTER" spacing="11.0">
+                  <children>
+                    <TextField fx:id="teamNameTextField" prefWidth="200.0" promptText="Team Name" />
+                    <Button mnemonicParsing="false" onAction="#addTeamButtonPressed" prefWidth="200.0" text="Add Team" />
+                  </children>
+                </VBox>
+                <VBox id="VBox" alignment="CENTER" spacing="11.0">
+                  <children>
+                    <TextField id="teamNameTextField" fx:id="matchNameTextField" prefWidth="200.0" promptText="Match Name" />
+                    <Button mnemonicParsing="false" onAction="#addMatchButtonPressed" prefWidth="200.0" text="Add Match" />
+                  </children>
+                </VBox>
+              </children>
+            </VBox>
+            <AnchorPane id="AnchorPane" VBox.vgrow="ALWAYS">
+              <children>
+                <ListView id="sampleList" fx:id="teamList" prefHeight="614.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+              </children>
+            </AnchorPane>
+          </children>
+        </VBox>
+      </children>
+    </AnchorPane>
+  </left>
+  <top>
+    <AnchorPane minHeight="24.0" prefHeight="24.0" prefWidth="1672.0">
+      <children>
+        <MenuBar cache="true" mouseTransparent="false" prefHeight="24.0" prefWidth="1672.0" style="" styleClass="white-menu-bar" useSystemMenuBar="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#openMenuButtonPressed" text="Open" />
+                <MenuItem mnemonicParsing="false" onAction="#saveMenuButtonPressed" text="Save" />
+                <MenuItem mnemonicParsing="false" onAction="#saveAsMenuButtonPressed" text="Save As" />
+                <MenuItem mnemonicParsing="false" onAction="#closeMenuButtonPressed" text="Close" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem mnemonicParsing="false" onAction="#consoleMenuButtonPressed" text="Console" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#addMatchMenuButtonPressed" text="Add Match" />
+                <MenuItem mnemonicParsing="false" onAction="#deleteTeamMenuButtonPressed" text="Delete Team" />
+                <MenuItem mnemonicParsing="false" onAction="#deleteMatchMenuButtonPressed" text="Delete Match" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Analyze">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#rankTeamsMenuButtonPressed" text="Rank Teams" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#aboutMenuButtonPressed" text="About" />
+              </items>
+            </Menu>
+          </menus>
+          <stylesheets>
+            <URL value="@../../res/MainGUISheet.css" />
+          </stylesheets>
+        </MenuBar>
+      </children>
+    </AnchorPane>
+  </top>
+</BorderPane>

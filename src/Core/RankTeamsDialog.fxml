@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="412.0" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Core.RankTeamsDialogController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutX="96.0" layoutY="5.0" spacing="5.0">
+      <children>
+        <CheckBox mnemonicParsing="false" onAction="#hasAutoButtonPressed" text="Has Autonomous">
+          <font>
+            <Font size="13.0" fx:id="x1" />
+          </font>
+        </CheckBox>
+        <CheckBox font="$x1" mnemonicParsing="false" onAction="#hasHangButtonPressed" text="Has Hanging" />
+      </children>
+    </HBox>
+    <TableView fx:id="rankingTableView" layoutX="0.0" layoutY="30.0" prefHeight="375.0" prefWidth="412.0">
+      <columns>
+        <TableColumn prefWidth="206.0" text="Team Name" fx:id="teamNameTableColumn" />
+        <TableColumn prefWidth="206.0" text="Win Percentage" fx:id="winPercentageTableColumn" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>
